@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: cases_per_municipality
+    description: "A starter dbt model"
+    
+  - name: covid_stats_per_municipality
+    description: "A starter dbt model"
+    
+  - name: vaccinations_per_municipality
+    description: "A starter dbt model"
+    
+
+sources:
+- name: tpch
+  database: eduvision_dbt
+  schema: public
+  tables:
+  - name: cases_muni
+  - name: cases_muni_cum
+  - name: population
+  - name: schedule
+  - name: timestamps
+  - name: vacc_muni_cum
